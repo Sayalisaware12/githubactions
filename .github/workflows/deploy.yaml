@@ -14,17 +14,17 @@ jobs:
           pwd
           ls -R
         
-      - name: Install dependencies
-        working-directory: ./frontend
-        run: npm install
+      # - name: Install dependencies
+      #   working-directory: ./frontend
+      #   run: npm install
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
 
       - name: Run tests
         run: npm test
