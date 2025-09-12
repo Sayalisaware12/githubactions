@@ -9,6 +9,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
+      - name: Debug – list files
+        run: |
+          pwd
+          ls -R
+        
       - name: Install dependencies
         working-directory: ./frontend
         run: npm install
